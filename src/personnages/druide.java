@@ -33,20 +33,20 @@ public class druide {
 		return "Le druide " + nom + " : ";
 	}
 
-	private void preparerPotion() {
+	public void preparerPotion() {
 		forcePotion = random.nextInt(effetPotionMin, effetPotionMax);
 		if (forcePotion > 7) {
-			System.out.println("J'ai préparé une super potion de force " + forcePotion);
+			System.out.println(prendreParole() + "« J'ai préparé une super potion de force " + forcePotion + "»");
 		} else {
-			System.out.println("Je n'ai pas trouvé tous les ingrédients, ma potion seulement de force "
+			System.out.println(prendreParole() + "« Je n'ai pas trouvé tous les ingrédients, ma potion seulement de force "
 
-					+ forcePotion);
+					+ forcePotion + "»");
 		}
 	}
 
 	public void booster(gaulois gaulois) {
 		if (gaulois.getNom() == "Obélix") {
-			System.out.println("Non, Obélix !... Tu n’auras pas de potion magique !");
+			System.out.println("« Non, Obélix !... Tu n’auras pas de potion magique !»");
 		} else {
 			gaulois.boirePotion(forcePotion);
 		}
