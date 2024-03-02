@@ -25,8 +25,8 @@ public class village {
 	}
 	
 	public void afficherVillage() {
-		System.out.println("Dans le village du chef " + villageois[0].getNom() + " vient les légendaires gaulois : \n");
-		for (int i=1; i<nbVillageois;i++) {
+		System.out.println("Dans le village du chef " + chef.getNom() + " vient les légendaires gaulois : \n");
+		for (int i=0; i<nbVillageois;i++) {
 			System.out.println("- " + villageois[i].getNom());
 		}
 	}
@@ -39,8 +39,8 @@ public class village {
 		village village = new village("Village des Irréductibles", 30);
 //		gaulois gaulois=village.trouverHabitant(30);
 //		On obtient une erreur car le tableau va de 0 à 29 et non 30.
-		gaulois chef = new gaulois("Abraracourcis", 6);
-		village.ajouterHabitant(chef);
+		chef abraracourcix = new chef("Abraracourcix", 6,village);
+        village.setChef(abraracourcix);
 		gaulois asterix = new gaulois("Astérix", 6);
 		village.ajouterHabitant(asterix);
 //		gaulois gaulois = village.trouverHabitant(1);
