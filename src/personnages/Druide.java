@@ -46,7 +46,7 @@ public class Druide {
 	}
 
 	public void booster(Gaulois gaulois) {
-		if (gaulois.getNom() == "Obélix") {
+		if (gaulois.getNom() != null && gaulois.getNom().equals("Obélix")) {
 			System.out.println(prendreParole() + "« Non, Obélix !... Tu n’auras pas de potion magique !»");
 		} else {
 			gaulois.boirePotion(forcePotion);
@@ -54,7 +54,7 @@ public class Druide {
 	}
 
 	public static void main(String[] args) {
-		Druide Druide = new Druide("panoramix", 5, 10);
-		Druide.preparerPotion();
+		Druide druide = new Druide("panoramix", 5, 10);
+		druide.preparerPotion();
 	}
 }
