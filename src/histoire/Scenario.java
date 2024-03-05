@@ -1,15 +1,15 @@
 package histoire;
 
-import personnages.druide;
-import personnages.gaulois;
-import personnages.romain;
+import personnages.Druide;
+import personnages.Gaulois;
+import personnages.Romain;
 
-public class scenario {
+public class Scenario {
 	public static void main(String[] args) {
-		gaulois asterix = new gaulois("Asterix", 8);
-		gaulois obelix = new gaulois("Obélix", 25);
-		romain minus = new romain("Minus", 6);
-		druide panoramix = new druide("Panoramix", 5, 10);
+		Gaulois asterix = new Gaulois("Asterix", 8);
+		Gaulois obelix = new Gaulois("Obélix", 25);
+		Romain minus = new Romain("Minus", 6);
+		Druide panoramix = new Druide("Panoramix", 5, 10);
 		panoramix.parler("Je vais aller préparer une petite potion...");
 		panoramix.preparerPotion();
 		panoramix.booster(obelix);
