@@ -11,9 +11,8 @@ public class Trophee {
 	public Equipement[] getEquipement() {
 		return equipement;
 	}
-	
+
 	public String donnerNom() {
 		return gaulois.getNom();
 	}
 }
-
