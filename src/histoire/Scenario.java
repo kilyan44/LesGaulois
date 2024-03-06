@@ -2,6 +2,7 @@ package histoire;
 
 import personnages.Druide;
 import personnages.Gaulois;
+import personnages.Musee;
 import personnages.Romain;
 import personnages.Equipement;
 
@@ -41,11 +42,7 @@ public class Scenario {
 		do {
 			asterix.frapper(milexcus);
 		} while (milexcus.isVainqueur());
-		
-// Partie un décommenteur
-		
-// Musée musée = new Musée();
-// astérix.faireUneDonnation(musee);
-
+ Musee musee = new Musee();
+ asterix.faireUneDonnation(musee);
 	}
 }
