@@ -37,7 +37,7 @@ public class Gaulois {
 		Equipement[] tropheesEjectes = romain.recevoirCoup((force / 3) * effetPotion);
 		if (tropheesEjectes != null) {
 			for (int i = 0; i < tropheesEjectes.length; i++, nbTrophees++) {
-				this.trophees[nbTrophees] = tropheesEjectes[i];
+				this.trophees[nbTrophees] = tropheesEjectes[i] ;
 			}
 		}
 	}
@@ -49,14 +49,14 @@ public class Gaulois {
 	}
 
 	public void faireUneDonnation(Musee musee) {
-		if (nbTrophees != 0){
+		if (nbTrophees != 0) {
 			System.out.println(prendreParole() + " « Je donne au musee tous mes trophees :");
-			for (int i=0;i<nbTrophees;i++) {
+			for (int i = 0; i < nbTrophees; i++) {
 				System.out.println("- " + trophees[i]);
-				musee.donnerTrophees(trophees[i]);
+				musee.donnerTrophees(this, trophees[i]);
 			}
 			nbTrophees = 0;
-		}			
+		}
 	}
 
 	@Override

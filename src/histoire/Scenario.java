@@ -44,5 +44,6 @@ public class Scenario {
 		} while (milexcus.isVainqueur());
  Musee musee = new Musee();
  asterix.faireUneDonnation(musee);
+ musee.extraireInstructionsOCaml();
 	}
 }
